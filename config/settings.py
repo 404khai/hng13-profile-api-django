@@ -10,21 +10,16 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 from decouple import config
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
-
-
-
-SECRET_KEY = config("DJANGO_SECRET_KEY")
-DEBUG = config("DEBUG", default=False, cast=bool)
-ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="*").split(",")
-
+# Safely read both .env and Railway variables
+SECRET_KEY = config("DJANGO_SECRET_KEY", default=os.getenv("DJANGO_SECRET_KEY", "fallback-secret-key"))
+DEBUG = config("DEBUG", default=os.getenv("DEBUG", "False")) in ["True", "true", True]
+ALLOWED_HOSTS = config("ALLOWED_HOSTS", default=os.getenv("ALLOWED_HOSTS", "*")).split(",")
 
 
 # Application definition

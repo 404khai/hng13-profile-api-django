@@ -1,0 +1,58 @@
+# =========================================
+# Python
+# =========================================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# =========================================
+# Virtual Environment
+# =========================================
+env/
+venv/
+ENV/
+.venv/
+
+# =========================================
+# Django
+# =========================================
+*.log
+*.pot
+*.pyc
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+static/
+local_settings.py
+
+# =========================================
+# Environment & Secrets
+# =========================================
+.env
+.env.local
+.env.production
+.env.development
+*.secret
+*.json.secret
+
+# =========================================
+# IDEs & Editors
+# =========================================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# =========================================
+# OS Files
+# =========================================
+.DS_Store
+Thumbs.db
+
+# =========================================
+# Migrations (optional, uncomment if needed)
+# =========================================
+# */migrations/__pycache__/
+# */migrations/*.py
+# !*/migrations/__init__.py

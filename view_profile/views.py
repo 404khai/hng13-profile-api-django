@@ -13,8 +13,8 @@ def profile_view(request):
     data = {
         "status": "success",
         "user": {
-            "email": "youremail@example.com",
-            "name": "Your Full Name",
+            "email": "omajeneoghenefega11@gmail.com",
+            "name": "Oghenefega Omajene",
             "stack": "Python/Django"
         },
         "timestamp": datetime.now(timezone.utc).isoformat(),

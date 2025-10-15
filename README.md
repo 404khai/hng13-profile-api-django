@@ -80,3 +80,33 @@ cd hng13-profile-api-django
 python -m venv venv
 source venv/bin/activate     # On macOS/Linux
 venv\Scripts\activate        # On Windows
+
+
+```
+## Install dependencies
+```bash
+pip install -r requirements.txt
+
+
+```
+## Run migrations(if any)
+```bash
+python manage.py migrate
+
+
+```
+## Start the development server
+```bash
+python manage.py runserver
+
+
+```
+## Then visit to access the profile endpoint
+```bash
+http://127.0.0.1:8000/me
+
+
+```
+## Live access to endpoint at
+```bash
+https://hng13-profile-api-django-production.up.railway.app/me
